@@ -58,7 +58,7 @@ public class CryptoChalSet1_4{
 					char[] textChar = hexToChar(evrLine);
 					char[] message = new char[textChar.length];
 					char theRealE = findTheMost(textChar);
-					char key = (char)('e' ^ theRealE);
+					char key = (char)(' ' ^ theRealE);
 
 					for (int i = 0; i < textChar.length; i++){
 						message[i] = (char)(textChar[i] ^ key);
